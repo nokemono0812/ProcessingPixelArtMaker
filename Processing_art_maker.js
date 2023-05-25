@@ -4,7 +4,7 @@ let x = 30, y = 30, fillX = 0, fillY = 0, allow = 0, allow2 = 0, allow3 = 0, red
 function setup() {
   canvas = createCanvas(600, 600);
   log = "/*Processingドット絵作成ツールをご利用頂きありがとうございます*/\n/*コードは実行後にSキーを押すことでPNGファイルとして保存できます*/\n/*Processing pixel art maker 2023: Version 1.22*/\n\nfloat dotWidth = 10; //１ドットの横幅\nfloat dotHeight = 10; //１ドットの縦幅\n\nvoid setup(){\n  size(300, 300); //表示サイズ\n  background(255); //背景色\n  noStroke(); //ドット枠線なし\n}\n\nvoid draw(){\n\n/*ここからドット絵のデータです*/\n";
-  document.getElementById("code").value = log + '\n/*ここまでドット絵のデータです*/\n\n}\n\n/*ここから画像の保存に関するコードです*/\n\nvoid keyPressed(){\n  if(key == "s"){\n    save("untitled.png"); //画像のファイル名\n  }\n}';
+  document.getElementById("code").value = log + '\n/*ここまでドット絵のデータです*/\n\n}\n\n/*ここから画像の保存に関するコードです*/\n\nvoid keyPressed(){\n  if(keyCode == 83){\n    save("untitled.png"); //画像のファイル名\n  }\n}';
   document.getElementById("name").value = "untitled";
   document.getElementById("red").value = "0";
   document.getElementById("green").value = "0";
@@ -269,7 +269,7 @@ function mouseClicked(){
       log += "\nfill(" + red + "," + green + "," + blue + ");";
     }
     log += "\nrect(" + x + " * dotWidth, " + y + " * dotHeight, dotWidth, dotHeight); //X軸:列" + (x + 1) + ", Y軸:列" + (y + 1);
-    document.getElementById("code").value = log + '\n\n/*ここまでドット絵のデータです*/\n\n}\n\n/*ここから画像の保存に関するコードです*/\n\nvoid keyPressed(){\n  if(key == "s"){\n    save("untitled.png"); //画像のファイル名\n  }\n}';
+    document.getElementById("code").value = log + '\n\n/*ここまでドット絵のデータです*/\n\n}\n\n/*ここから画像の保存に関するコードです*/\n\nvoid keyPressed(){\n  if(keyCode == 83){\n    save("untitled.png"); //画像のファイル名\n  }\n}';
     allow = 1;
   }
   else if((mouseX <= 600) && (mouseY <= 600) && (mouseX >= 0) && (mouseY >= 0) && (fillMode == 1)){
@@ -586,7 +586,7 @@ function mouseClicked(){
         log += "\nfill(" + red + "," + green + "," + blue + ");";
       }
       log += "\nrect(" + x + " * dotWidth, " + y + " * dotHeight, dotWidth * " + (fillX - x + 1) + ", dotHeight * " + (fillY - y + 1) + "); //X軸:列" + (x + 1) + ", Y軸:列" + (y + 1) + ", 塗りつぶし";
-      document.getElementById("code").value = log + '\n\n/*ここまでドット絵のデータです*/\n\n}\n\n/*ここから画像の保存に関するコードです*/\n\nvoid keyPressed(){\n  if(key == "s"){\n    save("untitled.png"); //画像のファイル名\n  }\n}';
+      document.getElementById("code").value = log + '\n\n/*ここまでドット絵のデータです*/\n\n}\n\n/*ここから画像の保存に関するコードです*/\n\nvoid keyPressed(){\n  if(keyCode == 83){\n    save("untitled.png"); //画像のファイル名\n  }\n}';
       document.getElementById("status").textContent = "入力モード:クリックしてドットを入力してください";
       allow3 = 1;
       fillMode = 0;
