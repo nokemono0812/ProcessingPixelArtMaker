@@ -3,7 +3,7 @@ let x = 30, y = 30, fillX = 0, fillY = 0, allow = 0, allow2 = 0, allow3 = 0, red
 
 function setup() {
   canvas = createCanvas(600, 600);
-  log = "/*Processingドット絵作成ツールを使って頂きありがとうございます！*/\n/*コードは実行後にSキーを押すことでPNGファイルとして保存できます*/\n/*Processing pixel art maker 2023 (Version 1.24)*/\n\nfloat dotWidth = 10; //１ドットの横幅\nfloat dotHeight = 10; //１ドットの縦幅\n\nvoid setup(){\n  size(300, 300); //表示サイズ\n  background(255); //背景色\n  noStroke(); //ドット枠線なし\n}\n\nvoid draw(){\n\n/*ここからドット絵のデータです*/\n";
+  log = "/*Processingドット絵作成ツールを使って頂きありがとうございます！*/\n/*コードは実行後にSキーを押すことでPNGファイルとして保存できます*/\n/*Processing pixel art maker 2023 (Version 1.25)*/\n\nfloat dotWidth = 10; //１ドットの横幅\nfloat dotHeight = 10; //１ドットの縦幅\n\nvoid setup(){\n  size(300, 300); //表示サイズ\n  background(255); //背景色\n  noStroke(); //ドット枠線なし\n}\n\nvoid draw(){\n\n/*ここからドット絵のデータです*/\n";
   document.getElementById("code").value = log + '\n/*ここまでドット絵のデータです*/\n\n}\n\n/*ここから画像の保存に関するコードです*/\n\nvoid keyPressed(){\n  if(keyCode == 83){\n    save("untitled.png"); //画像のファイル名\n  }\n}';
   document.getElementById("name").value = "untitled";
   document.getElementById("red").value = "0";
@@ -571,7 +571,7 @@ function mouseClicked(){
     }
     let fillSucX = fillX - x;
     let fillSucY = fillY - y;
-    if((fillSucX > 0) && (fillSucY > 0)){
+    if((fillSucX >= 0) && (fillSucY >= 0)){
       fill(red, green, blue);
       let newColor = "rgb(" + red + "," + green + "," + blue + ")";
       if(newColor != rireki){
@@ -592,7 +592,7 @@ function mouseClicked(){
       fillMode = 0;
     }
     else{
-      alert("始点より左下を選択してください");
+      alert("始点より右下の点を選択してください");
     }
   }
   else{}
@@ -668,8 +668,8 @@ function keyPressed(){
     if((missLock == 0) && (fillMode != 0)){
       fillMode = 0;
       document.getElementById("status").textContent = "入力モード:クリックしてドットを入力してください";
-x = 30;
-y = 30;
+      x = 30;
+      y = 30;
     }
   }
 }
