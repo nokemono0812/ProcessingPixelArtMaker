@@ -39,7 +39,7 @@
     canvas{
       border: solid 1px rgb(30, 30, 30);
       box-shadow: 1px 1px #fff;
-      margin: 0  0 10px 10px;
+      margin: 0  10px 10px 10px;
       cursor: cell;
     }
     #tools{
@@ -48,8 +48,19 @@
       position: fixed;
       top: 0;
       right: 0;
-      background-color: #ccc;
+      background-color: #ddd;
       padding: 0 2vw;
+      overflow-y: auto;
+    }
+    #main{
+      width: 60vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      padding: 0;
+      overflow-x: auto;
       overflow-y: auto;
     }
     div{
@@ -65,7 +76,7 @@
       border: solid 1px #000;
     }
     button{
-      width: 65px;
+      width: 68px;
       height: auto;
       padding: 2px;
       font-size: 14px;
@@ -82,13 +93,16 @@
 </head>
 
 <body id="body">
-  <p style="margin: 8px 0 0 10px;" id="status">
-    入力モード:クリックしてドットを入力してください
-  </p>
+  <span id="main">
+    <p style="margin: 8px 0 0 10px;" id="status">
+      入力モード:クリックしてドットを入力してください
+    </p>
+    <span id="display"></span>
+  </span>
   <span id="tools">
     <p>
       <strong style="font-size: 22px;">Processingドット絵作成ツール(Java)</strong>
-      v1.26
+      v1.27
     </p>
     <p>
       クイックスタートガイド
