@@ -275,7 +275,7 @@ function mouseClicked(){
       }
     }
     if(indention == 1){
-      log += "\nrect(" + x + " * dotWidth, " + y + " * dotHeight, dotWidth, dotHeight); //X軸:列" + (x + 1) + ", Y軸:列" + (y + 1);
+      log += "\nrect(" + x + " * dotWidth, " + y + " * dotHeight, dotWidth, dotHeight); /*X軸:列" + (x + 1) + ", Y軸:列" + (y + 1) + "*/";
     }
     else{
       log += "rect(" + x + " * dotWidth," + y + " * dotHeight,dotWidth,dotHeight);/*X軸:列" + (x + 1) + ",Y軸:列" + (y + 1) + "*/";
@@ -602,7 +602,7 @@ function mouseClicked(){
         }
       }
       if(indention == 1){
-        log += "\nrect(" + x + " * dotWidth, " + y + " * dotHeight, dotWidth * " + (fillX - x + 1) + ", dotHeight * " + (fillY - y + 1) + "); //X軸:列" + (x + 1) + ", Y軸:列" + (y + 1) + ", 塗りつぶし";
+        log += "\nrect(" + x + " * dotWidth, " + y + " * dotHeight, dotWidth * " + (fillX - x + 1) + ", dotHeight * " + (fillY - y + 1) + "); /*X軸:列" + (x + 1) + ", Y軸:列" + (y + 1) + ", 塗りつぶし*/";
       }
       else{
         log += "rect(" + x + " * dotWidth," + y + " * dotHeight,dotWidth * " + (fillX - x + 1) + ",dotHeight * " + (fillY - y + 1) + ");/*X軸:列" + (x + 1) + ",Y軸:列" + (y + 1) + ",塗りつぶし*/";
